@@ -46,6 +46,10 @@ function limpiarCaja () {
 
 //funcion sortear amigo 
 function sortearAmigo() {
+    if (amigos.length < 2){
+        alert ("ingrese más de un nombre de usuario");
+        return;
+    }
     if (amigos.length === 0)
     {alert ("No ingresaste nombres para sortear")
     return;
@@ -53,8 +57,9 @@ function sortearAmigo() {
     let nombreAleatorio = Math.floor(Math.random()*amigos.length);
     let nombreElegido = amigos[nombreAleatorio];
     asignarTextoElemento ("#resultado", `¡tu amigo secreto es ${nombreElegido}!`);
-    console.log ("nombre elegido =" +nombreElegido )
-    asignarTextoElemento ("#listaAmigos","")
+    console.log ("nombre elegido =" +nombreElegido );
+    amigos = [];
+    nombresEnInterfaz ();
 }
 
 
