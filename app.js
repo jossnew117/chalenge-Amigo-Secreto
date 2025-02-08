@@ -53,8 +53,12 @@ function sortearAmigo() {
     let nombreAleatorio = Math.floor(Math.random()*amigos.length);
     let nombreElegido = amigos[nombreAleatorio];
     asignarTextoElemento ("#resultado", `¡tu amigo secreto es ${nombreElegido}!`);
-    
+    console.log ("nombre elegido =" +nombreElegido )
+    amigos = [];
+    nombresEnInterfaz ();
+    asignarTextoElemento ("#resultado", )
 }
+
 
     
 
